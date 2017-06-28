@@ -1,0 +1,304 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>辣妈分享罐</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/echo.css">
+    <link rel="stylesheet" type="text/css" href="css/animations.css">
+    <style>
+        .loading_wrap span {
+            display: block;
+            width: 0;
+            float: left;
+            height: 10px;
+            max-width: 280px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+    </style>
+
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/echo.min.js"></script>
+    <script src="js/velocity.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+    <script src="js/index_wx.js"></script>
+
+</head>
+<body>
+<!--<a class="mic"></a>-->
+<!--<audio class="bgMuisc" loop="loop"><source src="mic.mp3" type="audio/mpeg"></audio>-->
+
+<div style="  width: 100%;height: 100%; overflow: hidden;max-width: 640px;margin: 0 auto">
+    <div class="page page-0-1">
+        <div class="mask">
+            <img src="img/logo.png" class="img_1">
+            <div class="loading_wrap">
+                <span class="loading-progress"></span>
+                <br>
+                <b></b></div>
+        </div>
+    </div>
+    <div class="page page-1-1 hide">
+        <div class="wrap pr" style="overflow: hidden">
+
+            <img class="tophua pt-page-rotateCarouselBottomIn hide" src="img/logo.png">
+            <img class="img_4 pt-page-rotateCarouselTopIn hide" src="img/lmwz.png">
+            <img class="img_5 pt-page-moveFromRight hide" src="img/foot1.png">
+            <img class="img_6 pt-page-moveCircle hide" src="img/foot2.png">
+            <img class="img_7 pt-page-moveFromLeft hide" src="img/foot3.png">
+
+            <button class="btn1"></button>
+            <button class="btn2"></button>
+            <button class="btn3"></button>
+
+
+        </div>
+    </div>
+    <div class="page page-2-1  hide" style="overflow-y: auto;background: #e6f7fd">
+        <div class="wrap">
+            <img class="img_1 " src="img/t1.jpg">
+
+            <button class="btn4"></button>
+        </div>
+    </div>
+
+    <div class="page page-3-1 hide">
+        <div class="wrap">
+            <div class="img_2 pt-page-rotateCarouselTopIn">
+                <div class="txbox">
+                    <img src="img/tx.jpg">
+                </div>
+                <div class="pr"> <img class="img_4 pt-page-moveFromBottom hide" src="img/yun1.png"></div>
+                <div class="pr">  <img class="img_5 pt-page-moveFromRight hide" src="img/yun2.png"></div>
+                <div class="pr"><a class="sczp">上传照片</a></div>
+            </div>
+            <textarea class="yej" placeholder="请输入30字以上的育儿经"></textarea>
+            <p class="wz">太子乐育儿专家会选出优秀的育儿心得用户给予特殊奖励哦~</p>
+            <button class="btn5"></button>
+            <img class="img_3 pt-page-rotateCarouselTopIn hide" src="img/foothua.png">
+
+            <div class="mask2">
+                <img src="img/fxy.png">
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="page page-4-1 hide">-->
+        <!--<div class="wrap">-->
+            <!--<div class="img_2 pt-page-rotateCarouselTopIn">-->
+                <!--<div class="txbox">-->
+                    <!--<img src="img/tx.jpg">-->
+                <!--</div>-->
+                <!--<div class="pr"> <img class="img_4 pt-page-moveFromBottom hide" src="img/yun1.png"></div>-->
+                <!--<div class="pr">  <img class="img_5 pt-page-moveFromRight hide" src="img/yun2.png"></div>-->
+                <!--<div class="pr"><a class="sczp">替换照片</a></div>-->
+            <!--</div>-->
+            <!--<div class="wxtx">-->
+                <!--<img src="img/tx.jpg">-->
+            <!--</div>-->
+            <!--<textarea class="yej" style="width: 180px; margin-left: -60px; "></textarea>-->
+            <!--<button class="btn6"></button>-->
+            <!--<img class="img_3 pt-page-rotateCarouselTopIn hide" src="img/foothua.png">-->
+
+        <!--</div>-->
+    <!--</div>-->
+
+
+    <div class="page page-4-1 hide">
+        <div class="wrap" style="overflow: hidden">
+            <img class="img_1 nfg" src="img/nfg.png">
+            <img class="img_4" src="img/wycj.png">
+            <img class="img_3" src="img/jplb.png">
+            <img class="img_2 pt-page-rotateCarouselTopIn hide" src="img/foothua.png">
+            <button class="btn7"></button>
+            <div class="wzj">
+                <div class="yzjdiv">
+                    <img src="img/wjjti.png">
+                    <p class="hide">好可惜呀没有中，再试试吧！您还有2次抽奖机会哦~！</p>
+                    <p class="hide">
+                        差一点就中啦~！离大奖仅剩一步之遥~还有最后1次机会，好好把握，万一中了呢？
+                    </p>
+                    <p class="">
+                        好可惜没中奖！您今天的抽奖机会已用尽。下次中奖几率将大大增加~记得明天再来玩哦~！（关注“太子乐快乐汇”随时了解活动进程）
+                    </p>
+                </div>
+                <img src="img/bg2.png" class="bg2">
+                <img src="img/bg3.png" class="bg3">
+                <button class="btn8"></button>
+            </div>
+
+            <div class="yzj">
+                <div class="yzjdiv">
+
+                    <img src="img/yjjti.png">
+                    <p>恭喜您中奖啦！奖品是<span>宝宝健身器</span>！请尽快与微信公众号【太子快乐汇】客服人员取得联系.
+                    </p>
+                </div>
+                <img src="img/bg2.png" class="bg2">
+                <img src="img/bg3.png" class="bg3">
+                <button class="btn8"></button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="page page-5-1 hide">
+        <div class="wrap">
+            <img class="tophua pt-page-moveFromTop hide" src="img/zjjl.png">
+            <img class="img_2 pt-page-rotateCarouselTopIn hide" src="img/foothua.png">
+            <div class="wdzjjl">
+                <ul>
+                    <li>您抽到<span>驴妈妈旅游网20元代金券</span></li>
+                    <li>很遗憾<span>您没有中奖</span></li>
+                    <li>您抽到<span>驴妈妈旅游网20元代金券</span></li>
+                    <li>很遗憾<span>您没有中奖</span></li>
+                    <li>您抽到<span>驴妈妈旅游网20元代金券</span></li>
+                    <li>很遗憾<span>您没有中奖</span></li>
+                </ul>
+            </div>
+            <div id="demo">
+                <ul id="demo1">
+                    <li><i>冥界摄政王抽到</i><span>儿童电动车</span></li>
+                    <li><i>冥界摄政王抽到</i><span>儿童电动车</span></li>
+                    <li><i>冥界摄政王抽到</i><span>儿童电动车</span></li>
+                    <li><i>冥界摄政王抽到</i><span>儿童电动车</span></li>
+                    <li><i>冥界摄政王抽到</i><span>儿童电动车</span></li>
+                    <li><i>冥界摄政王抽到</i><span>儿童电动车</span></li>
+                </ul>
+                <div id="demo2"></div>
+            </div>
+            <button class="btn9"></button>
+        </div>
+    </div>
+
+    <div class="page page-6-1 hide">
+        <div class="wrap" style="overflow-y: auto">
+            <div class="yejbox">
+                <div class="wxtx2">
+                    <img src="img/tx.jpg">
+                </div>
+                <div class="yej2">爱爱了就分开了了积分卡拉丁富利卡几十块的浪费房间卡了
+                    的房间爱里的卡拉丁富利卡几十块的浪费房间卡了的房间爱里的卡拉丁
+                    富利卡几十块的浪费房间卡了的房间爱里的卡拉丁富利卡几十块的浪费房
+                    间卡了的房间爱里的卡拉丁富利卡几十块的浪费房间卡了的房间爱里的卡拉丁富利卡几十块的浪费房间卡了的房间爱里的</div>
+            </div>
+            <div class="yejbox">
+                <div class="wxtx2">
+                    <img src="img/tx.jpg">
+                </div>
+                <div class="yej2">2</div>
+            </div>
+            <div class="yejbox">
+                <div class="wxtx2">
+                    <img src="img/tx.jpg">
+                </div>
+                <div class="yej2">3</div>
+            </div>
+            <div class="yejbox">
+                <div class="wxtx2">
+                    <img src="img/tx.jpg">
+                </div>
+                <div class="yej2">4</div>
+            </div>
+
+            <div class="yejbox">
+                <div class="wxtx2">
+                    <img src="img/tx.jpg">
+                </div>
+                <div class="yej2">5</div>
+            </div>
+
+
+            <div class="yejbox">
+                <div class="wxtx2">
+                    <img src="img/tx.jpg">
+                </div>
+                <div class="yej2">6</div>
+            </div>
+
+            <div class="yejbox">
+                <div class="wxtx2">
+                    <img src="img/tx.jpg">
+                </div>
+                <div class="yej2">7</div>
+            </div>
+
+            <div class="yejbox">
+                <div class="wxtx2">
+                    <img src="img/tx.jpg">
+                </div>
+                <div class="yej2">8</div>
+            </div>
+            <button class="btn11"></button>
+            <button class="btn12"></button>
+            <img class="img_3 pt-page-rotateCarouselTopIn hide" src="img/foothua.png">
+        </div>
+    </div>
+
+</div>
+<script src="js/index.js"></script>
+<script>
+    var speed=40;
+    window.onload=function(){
+        //do something
+        echo.init();
+//背景音乐
+//        var ms=$(".bgMuisc");
+//        ms[0].play();
+//        var sta=1;
+//        $(".mic").on("click",function muisc(){
+//            if(sta==1){
+//                sta=0;
+//                $(".mic").addClass("micclo");
+//                ms[0].pause();
+//            }else{
+//                sta=1;
+//                $(".mic").removeClass("micclo");
+//                ms[0].play();
+//            }
+//        });
+
+        //中奖记录滚动
+        var demo=document.getElementById("demo");
+        var demo2=document.getElementById("demo2");
+        var demo1=document.getElementById("demo1");
+        demo2.innerHTML=demo1.innerHTML
+        var MyMar=setInterval( function Marquee(){
+            if(demo.scrollTop>=demo1.offsetHeight){
+                demo.scrollTop=0;
+            }
+            else{
+                demo.scrollTop=demo.scrollTop+1;
+            }
+        },40)
+//        demo.onmouseover=function(){clearInterval(MyMar)}
+//        demo.onmouseout=function(){MyMar=setInterval(Marquee,speed)}
+
+        $(".btn5").on('click',function(){
+            $(".mask2").show();
+        })
+        $(".mask2").on('click',function(){
+            $(this).hide();
+        })
+        $(".btn8").on('click',function(){
+            $(".nfg").velocity({opacity:"1"},10);;
+            $('.wzj').velocity({opacity:"0"},10);
+            $('.yzj').velocity({opacity:"0"},10);
+            $(".btn7").show();
+        })
+        $('.nfg').on('click',function(){
+            $(".btn7").hide();
+            $(this).velocity({opacity:"0"},1000);
+            $('.wzj').velocity({opacity:"1"},2000)
+        })
+        $(".page-3-1,.page-6-1 .wrap").css({"height":$(window).height()}); //浏览器当前窗口可视区域宽度
+        $(".page-6-1 .wrap").css({"height":$(window).height()-105}); //浏览器当前窗口可视区域宽度
+
+    }
+</script>
+
+</body>
+</html>
